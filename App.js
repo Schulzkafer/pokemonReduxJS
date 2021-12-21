@@ -13,7 +13,6 @@ import HeaderComponent from './src/components/HeaderComponent';
 const image = { uri: "https://iili.io/7yJVa4.jpgttps://reactjs.org/logo-og.png" };
 
 const App = (props) => {
-   //console.log(props)
 
    return (
       <View style={styles.container}>
@@ -26,13 +25,8 @@ const App = (props) => {
 
             {
                (props.pokemon) ?
-                  <PageIndividual
-                  // pokemon={pokemon}
-                  // setPokemon={setPokemon}
-                  /> :
-                  <PageMultiple
-                  // setPokemon={setPokemon}
-                  />
+                  <PageIndividual /> :
+                  <PageMultiple />
             }
          </ImageBackground>
          <Footer />
@@ -64,39 +58,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
-
-
-
-
-
-
-// class App extends Component {
-//    decrementCount() {
-//       let { count, actions } = this.props;
-//       count--;
-//       actions.changeCount(count);
-//    }
-//    incrementCount() {
-//       let { count, actions } = this.props;
-//       count++;
-//       actions.changeCount(count);
-//    }
-//    render() {
-//       const { count } = this.props;
-//       return (
-//          <View styles={styles.container}>
-//             <Button
-//                title="increment"
-//                onPress={() => this.incrementCount()}
-//             />
-//             <Text style={styles.textCenter}>{count}</Text>
-//             <Button
-//                title="decrement"
-//                onPress={() => this.decrementCount()}
-//             />
-//          </View>
-//       );
-//    }
-// };
-
 

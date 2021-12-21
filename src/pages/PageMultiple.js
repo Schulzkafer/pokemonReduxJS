@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';//?
-import { View, ActivityIndicator, Text } from 'react-native'; //?
+import React, { useState, useEffect, useCallback } from 'react';
+import { View, ActivityIndicator } from 'react-native';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -11,6 +11,7 @@ import PokesList from "../components/PokesList"
 const limit = 50;
 
 const PageMultiple = (props) => {
+
    const [filteredPokesCharacteristics, setFilteredPokesCharacteristics] = useState([]);
    const [isLoading, setIsLoading] = useState(false);
 
